@@ -20,7 +20,7 @@ export default function Header({ title }: HeaderProps) {
           </div>
           <div className="space-x-4 md:flex">
             <button
-              className="duration-[0.4s] bg-transparent transition-transform ease-in-out hover:scale-110"
+              className="bg-transparent transition-transform ease-in-out hover:scale-110"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             >
               {theme === "light" ? <SunIcon /> : <MoonIcon />}
