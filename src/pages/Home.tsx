@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex h-full w-full flex-col gap-10 pt-3" id="home">
+    <div className="flex h-full w-full flex-col gap-10 pt-16" id="home">
       <div className="flex flex-col">
         <span>Hello, I'm</span>
         <strong>Patrick Handres</strong>
