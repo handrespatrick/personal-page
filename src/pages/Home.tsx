@@ -114,7 +114,7 @@ export default function Home() {
         <div className="flex w-[220px] flex-col">
           <img
             className="rounded-3xl"
-            src="../../public/images/patrick.png"
+            src="https://avatars.githubusercontent.com/u/64557056?v=4"
             alt="placeholder"
           />
         </div>
