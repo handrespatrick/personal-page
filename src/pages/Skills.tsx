@@ -183,7 +183,7 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-col items-start">
                   <li>MongoDB</li>
-                  <li>Advanced</li>
+                  <li>Medium</li>
                 </div>
               </div>
             </ul>
