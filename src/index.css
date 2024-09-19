@@ -21,7 +21,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  transition-duration: 0.4s;
+  transition:
+    0.4s,
+    opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.1s,
+    transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.1s;
 }
 
 h1 {
@@ -32,6 +35,14 @@ h1 {
 
 h2 {
   font-size: 2.4em;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #646cff;
+}
+
+h3 {
+  font-size: 0.938em;
+  font-weight: 500;
   line-height: 1.1;
   color: #646cff;
 }
