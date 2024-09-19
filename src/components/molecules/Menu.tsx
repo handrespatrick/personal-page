@@ -32,56 +32,29 @@ export default function Menu() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const menuItems = [
+    { id: "home", icon: <HomeIcon /> },
+    { id: "about-me", icon: <AboutMeIcon /> },
+    { id: "skills", icon: <SkillsIcon /> },
+    { id: "contact", icon: <ContactIcon /> },
+  ];
+
   return (
-    <footer className="fixed bottom-4 left-0 z-50 w-full opacity-95 lg:flex lg:justify-center">
-      <div className="flex justify-center lg:w-80">
-        <ul className="flex h-16 w-11/12 items-center justify-around rounded-[4rem] bg-gray-100 backdrop-blur-md dark:bg-slate-800">
-          <li
-            className={`cursor-pointer ${
-              activeSection === "#home"
-                ? "scale-110 rounded-full bg-gradient-to-t from-slate-600 to-[#646cff] shadow-lg"
-                : ""
-            } p-0.5`}
-          >
-            <a href="#home">
-              <HomeIcon />
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer ${
-              activeSection === "#about-me"
-                ? "scale-110 rounded-full bg-gradient-to-t from-slate-600 to-[#646cff] shadow-lg"
-                : ""
-            } p-0.5`}
-          >
-            <a href="#about-me">
-              <AboutMeIcon />
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer ${
-              activeSection === "#skills"
-                ? "scale-110 rounded-full bg-gradient-to-t from-slate-600 to-[#646cff] shadow-lg"
-                : ""
-            } p-0.5`}
-          >
-            <a href="#skills">
-              <SkillsIcon />
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer ${
-              activeSection === "#contact"
-                ? "scale-110 rounded-full bg-gradient-to-t from-slate-600 to-[#646cff] shadow-lg"
-                : ""
-            } p-0.5`}
-          >
-            <a href="#contact">
-              <ContactIcon />
-            </a>
-          </li>
+    <menu className="fixed bottom-4 left-0 z-50 w-full opacity-95 lg:flex lg:justify-center">
+      <nav className="flex justify-center lg:w-80">
+        <ul className="flex h-16 w-11/12 items-center justify-around rounded-[4rem] bg-[#dde3eecc] backdrop-blur-md dark:bg-[#1c2536cc]">
+          {menuItems.map((item) => (
+            <li
+              key={item.id}
+              className={`cursor-pointer p-0.5 ${activeSection === `#${item.id}` ? "scale-110 rounded-full bg-gradient-to-t from-slate-600 to-[#646cff] shadow-lg" : ""} `}
+            >
+              <a href={`#${item.id}`} aria-label={item.id}>
+                {item.icon}
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
-    </footer>
+      </nav>
+    </menu>
   );
 }
