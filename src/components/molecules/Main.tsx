@@ -3,5 +3,5 @@ type MainProps = {
 };
 
 export default function Main({ children }: MainProps) {
-  return <div className="pt-8">{children}</div>;
+  return <main className="pt-8">{children}</main>;
 }
